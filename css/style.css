@@ -1,0 +1,385 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex-grow: 1;
+    margin: 0;
+}    
+/* хедер */
+.header {
+    display: flex; 
+    box-sizing: border-box;
+    flex-wrap: wrap; /*адаптив*/
+    max-width: 1300px; /*адаптив*/
+    min-width: 400px; /*адаптив*/
+    width: 100%; /*адаптив*/
+    margin: 0 auto; 
+    padding: 0 16px; 
+    min-height: 80px; 
+    background-color: #213B7E;
+    justify-content: space-between; 
+    align-items: center; 
+}
+.site-logo {
+    max-width: 47px;
+    width: 100%;
+}
+.site-menu {
+    display: flex;
+    flex-wrap: wrap; /*адаптив*/
+    align-self: stretch; 
+    padding: 0;
+    margin:0;
+    list-style: none; 
+}
+.site-menu > li {
+    display: flex; 
+}
+.menu-link {
+    display: flex;
+    flex-wrap: wrap; /*адаптив*/
+    align-items: center; 
+    padding: 0 19px; 
+    background-color: #213B7E;
+    font-family: 'Roboto', sans-serif; /*шрифт*/
+    color: #FFFFFF; /*буквы*/
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration-line: underline;
+}
+.login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 153px; /*адаптив*/
+    width: 100%; /*адаптив*/
+    min-height: 50px;
+    font-family: 'Roboto', sans-serif; /*шрифт*/
+    font-weight: 400;
+    font-size: 18px; 
+    color:#FFFFFF;
+    text-decoration: none; 
+    background-color: #EA5D21;
+}
+.menu-link:hover {
+    background-color: #FFFFFF; /*при наведении мыши*/
+    color:#213B7E;
+    text-decoration: none;
+}
+
+/*popup*/
+.login-popup { /*окно попап*/
+    display: none; /*ставим в конце, чтобы сразу на старте не было видно*/
+    position: absolute;
+    z-index: 2; /*прозрачность на фоне остального - на слой выше */
+    bottom: 0; /*частично задает вертикальную позицию - прибил вниз*/
+    left: 50%; /*стал почти по центру внизу страницы*/
+    transform: translate(-50%, -80%); /*окончательно выровнялся*/
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    min-height: 418px;
+    padding: 26px 28px 56px;
+    background: #FFFFFF;
+    border: 1px solid #213B7E;
+    background-color: #FFFFFF;
+}
+.login-heading { /*заголовок*/
+    /* position: absolute; */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    text-align: center;
+}
+.login-form { /*форма*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.login-form > input { /*объявляем дочками инпуты, которые в форме*/
+    width: 100%;
+    max-width: 444px;
+    min-height: 55px;
+    margin-bottom: 56px;
+    border: 1px solid #808080;
+}
+.login-input { /*инпут-логин*/
+    width: 444px;
+    min-height: 54px;
+    background-color: #FFFFFF;
+    border: 1px solid #808080;
+    font-size: 24px;
+    line-height: 28px;
+    padding-left: 14px;
+    color: #808080;
+}
+.login-password { /*инпут-пароль*/
+    width: 444px;
+    min-height: 54px;
+    background-color: #FFFFFF;
+    border: 1px solid #808080;
+    font-size: 24px;
+    line-height: 28px;
+    padding-left: 14px;
+    color: #808080;
+}
+.popup-button { /*кнопка попап*/
+    display: flex;
+    justify-content: center; /*кнопка по центру*/
+    align-items: center; /*текст по центру*/
+    max-width: 153px;
+    width: 100%;
+    min-height: 50px;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #EA6113;
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+.active-link {
+    color: #213B7E;
+    background-color: #FFFFFF;
+    text-decoration: none;
+}
+.show-popup {
+    display: block;
+}
+.popup-close {
+    width: 40px;
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    border: 4px double #EA5D21;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.popup-close:hover {
+    border-radius: 50%;
+    transform: rotate(360deg);
+}
+/* main */
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 911px; /* адаптив */
+    min-width: 400px; /* адаптив */
+    width: 100%; /* адаптив */
+    margin: 0 auto; 
+}
+.class-img {
+    width: 100%; /* адаптив */
+    max-width: 523px;
+    height: auto; /*адаптив*/
+    /* height: 316px; */
+}
+.main-heading {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+}
+h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+}
+.intro-text {
+    width: 100%; /*адаптив*/
+    max-width: 634px; /*адаптив*/
+    height: 127px;  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+.color-em {
+    color:#CF5510;
+}
+.intro-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.blockquote {
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    color:#646464;
+}
+
+/* Students */
+.students-heading {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    position: relative;
+    right: 110px;
+}
+.students {
+    width: 1200px; /*1200*/
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 20px;
+    right: 160px;
+}
+.student {
+    padding-left: 50px;
+}
+/* .student:nth-child(2n + 2) { 
+    background-color: #808080;
+}*/ 
+.new-student {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 2px 6px 2px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    text-decoration: none;
+    position: relative;
+    top: -340px;
+    left: 108px;
+    background-color: #3AA828;
+}
+.student-foto {
+    max-width: 200px;
+    width: 100%;
+    min-height: 270px;
+    background: #86C6F4;
+}
+.student-name {
+    display:block; /*здесь блок, чтобы выровнять по центру надпись */
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+/* About-us */
+.video {
+    max-width: 820px;
+    width: 100%;
+    height: 550px;
+}
+/* Contacts */
+
+/* .img-map {
+    max-width: 1268px;
+    width: 100%;
+} */
+.text-info {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+.text-phone {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration: underline;
+    margin-top: 24px;
+}
+::selection {
+    color:#FFFFFF;
+    background-color: #CF5510;
+}
+
+.map {
+    max-width: 1268px;
+    width: 100%;
+    min-height: 370px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+/* футер */
+.footer {
+    display: flex;
+    box-sizing: border-box; 
+    flex-wrap: wrap;
+    max-width: 1300px; /*адаптив*/
+    min-width: 400px; /*адаптив*/
+    width: 100%; /*адаптив*/
+    min-height: 60px;
+    margin: 0 auto;
+    padding: 0 16px; 
+    background-color: #213B7E;
+    align-items: center;
+    justify-content: center;
+}
+.copyright {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color:rgba(255, 255, 255, 0.5);
+}
+.innop-link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color:rgba(255, 255, 255, 0.5);
+}
+@media (max-width:1000px) {
+    .main {
+        box-sizing: border-box;
+        padding: 0 2vw;
+    }
+    .header {
+        justify-content: center;
+        padding: 1em 16px;
+        gap: 1em;
+    }
+    .site-menu {
+        width: 60%;
+        min-height: 80px;
+    }
+    .blockquote:after {
+        margin-right: 50px;
+    }
+    .intro-text {
+        margin-bottom: 40px;
+    }
+    .login-input {
+        width: 100%;
+        max-width: 300px;
+    }
+    .login-password {
+        width: 100%;
+        max-width: 300px;
+    }
+    .popup-close {
+        position: absolute;
+        top: -30px;
+        right: 0px;
+    }
+    .students {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .students-heading {
+        text-align: center;
+    }
+}
